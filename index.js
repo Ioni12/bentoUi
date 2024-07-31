@@ -23,25 +23,24 @@ function slide() {
     let nextCount = (count + 1) % targets.length;
     
     gsap.to(targets[count], {
-        duration: 1.2, 
+        duration: 2, 
         xPercent: -100, 
         zIndex: 0
     });
     
     gsap.fromTo(targets[nextCount], 
         { xPercent: 100, zIndex: 10 }, 
-        { duration: 1.2, xPercent: 0, zIndex: 0 }
+        { duration: 2, xPercent: 0, zIndex: 0 }
     );
     
     count = nextCount;
 }
 
 function startSlideShow() {
-    slide(); // Run the first slide transition immediately
-    setInterval(slide, 5000); // Then run it every 5 seconds
+    slide();     
+    setInterval(slide, 5000); 
 }
 
-// Start the slideshow after the initial animation completes
 initialAnimation.then(() => {
-    setTimeout(startSlideShow, 1000); // Wait 1 second after initial animation before starting slideshow
+    setTimeout(startSlideShow, 1000); 
 });
