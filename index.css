@@ -70,6 +70,7 @@ body, html{
     display: grid;
     place-items: center;
     z-index: 0;
+    background-color: rgb(245, 233, 235)
 }
 
 @media screen and (max-width: 720px) {
