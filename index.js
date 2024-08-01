@@ -41,6 +41,10 @@ function startSlideShow() {
     setInterval(slide, 5000); 
 }
 
-initialAnimation.then(() => {
-    setTimeout(startSlideShow, 1000); 
-});
+
+
+window.addEventListener("load", () => {
+    initialAnimation.then(() => {
+        setTimeout(startSlideShow, 1000); 
+    });
+})
